@@ -1,5 +1,6 @@
 import { words } from '../constants/index.js';
 import Button from '../components/Button.jsx';
+import HeroExperience from '../components/HeroModels/HeroExperience.jsx';
 const Hero = () => {
   return (
     <section id="hero" className="relative overflow-hidden">
@@ -51,6 +52,16 @@ const Hero = () => {
             </div>
           </div>
         </header>
+
+{/* right: 3d model */}
+
+<figure>
+  <div className = "hero-3d-layoutborder-2">
+    <HeroExperience />
+  </div>
+</figure>
+
+
       </div>
     </section>
   );
