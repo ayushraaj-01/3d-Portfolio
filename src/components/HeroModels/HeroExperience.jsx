@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
-
+import { Room } from "./Room";
 const HeroExperience = () => {
     const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
     const isMobile = useMediaQuery({ query: "(max-width: 768px)" }); //react responsive hook to determine if the device is a tablet or mobile
@@ -12,19 +12,15 @@ const HeroExperience = () => {
 
 <OrbitControls
 enablePan={false}
-enableZoom={true}
+enableZoom={true} // Disable zoom on mobile devices
 maxDistance = {20}
-minDistance = {2}
+minDistance = {5}
 minPolarAngle={Math.PI / 5}
 maxPolarAngle={Math.PI / 2}
 />
 
 
-<mesh>
-    <boxGeometry args={[1, 1, 1]} />
-    <meshStandardMaterial color="teal" />
-</mesh>
-
+<Room/>
     </Canvas>
   )
 }
